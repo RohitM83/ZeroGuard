@@ -1,0 +1,87 @@
+﻿# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+dist/
+
+# Environment and credentials
+.env
+.env.*
+!.env.example
+*token*.json
+*.pem
+*.key
+secrets/
+
+# Databases and private data
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+*.csv
+normal_baseline.json
+training_data.json
+
+# Model files - review before publishing
+*.pt
+*.pth
+
+# Backups and archives
+archive/
+zeroguard_diagnostic_backup_*/
+*.bak
+*.backup*
+*.log
+
+# IDE and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Historical source backups
+**/*backup*/
+*before*backup*
+*.before_*.py
+*.bak*
+*.backup*
+
+# Generated API documentation
+openapi-production.json
+backend/openapi-production.json
+
+# Build output
+frontend/dist/
+
+# Old frontend and source backups
+**/*backup*
+**/*before_*
+
+# Research datasets and generated binary files
+*.zip
+*.npz
+*.npy
+
+# Android build output
+android/.gradle/
+android/**/build/
+
+# Local diagnostic and database utility scripts
+backend/check_ip.py
+backend/check_threat4.py
+backend/fix_database.py
+backend/test_response_action.py
+
+# Accidental root-level npm files (frontend has its own package files)
+/package.json
+/package-lock.json
+
+data/processed/

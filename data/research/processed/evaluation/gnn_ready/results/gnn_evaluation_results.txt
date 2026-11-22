@@ -1,0 +1,41 @@
+ZERO GUARD GNN EVALUATION RESULTS
+============================================================
+Evaluation: unseen attack-family test
+Dataset: CIC-IDS2017
+
+Total test samples: 100,000
+BENIGN: 50,000
+ATTACK: 50,000
+
+CONFUSION MATRIX
+------------------------------------------------------------
+TN: 30,408
+FP: 19,592
+FN: 2,432
+TP: 47,568
+
+METRICS
+------------------------------------------------------------
+Accuracy:    77.9760%
+Precision:   70.8279%
+Recall:      95.1360%
+F1-score:    81.2018%
+Specificity: 60.8160%
+
+UNSEEN ATTACK FAMILY RESULTS
+------------------------------------------------------------
+DDoS total:          25,000
+DDoS detected:       22,588
+DDoS missed:         2,412
+DDoS detection rate: 90.3520%
+
+PortScan total:          25,000
+PortScan detected:       24,980
+PortScan missed:         20
+PortScan detection rate: 99.9200%
+
+NOTE:
+DDoS and PortScan were excluded from training.
+Results represent unseen attack-family evaluation.
+They should not be interpreted as proof of detection
+of every possible real-world zero-day attack.

@@ -1,0 +1,22 @@
+ZERO GUARD GNN PUBLICATION RESULTS
+============================================================
+
+Dataset: CIC-IDS2017
+Evaluation: Unseen attack-family evaluation
+
+CONFUSION MATRIX
+TN = 30,408
+FP = 19,592
+FN = 2,432
+TP = 47,568
+
+CLASSIFICATION METRICS
+Accuracy    = 77.9760%
+Precision   = 70.8279%
+Recall      = 95.1360%
+F1-score    = 81.2018%
+Specificity = 60.8160%
+
+UNSEEN ATTACK FAMILIES
+DDoS: 22,588/25,000 detected (90.3520%)
+PortScan: 24,980/25,000 detected (99.9200%)

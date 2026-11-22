@@ -1,0 +1,64 @@
+======================================================================
+ZERO GUARD - PUBLICATION GNN EVALUATION RESULTS
+======================================================================
+
+Dataset: CIC-IDS2017
+Task: Binary network-flow classification
+BENIGN = 0
+ATTACK = 1
+
+Model: 2-layer Graph Convolutional Network (GCN)
+Input features: 78
+Hidden channels: 32
+Output classes: 2
+Dropout: 0.30
+
+Evaluation design:
+DDoS and PortScan were completely excluded from training.
+They were evaluated as unseen attack families.
+
+Training unseen-family verification:
+DDoS training rows: 0
+PortScan training rows: 0
+Verification: PASS
+
+CONFUSION MATRIX
+-----------------
+TN: 29056
+FP: 20944
+FN: 4784
+TP: 45216
+
+OVERALL METRICS
+----------------
+Accuracy: 74.2720%
+Precision: 68.3434%
+Recall: 90.4320%
+F1-score: 77.8512%
+Specificity: 58.1120%
+
+UNSEEN ATTACK FAMILY RESULTS
+----------------------------
+DDoS:
+Total: 25000
+Detected: 21668
+Missed: 3332
+Detection rate: 86.6720%
+
+PortScan:
+Total: 25000
+Detected: 23548
+Missed: 1452
+Detection rate: 94.1920%
+
+METHODOLOGY NOTE
+-----------------
+The graph is a feature-similarity k-NN graph.
+Each node represents a CIC-IDS2017 network flow.
+Edges represent similarity between flow feature vectors.
+The graph is not the original communication topology.
+
+IMPORTANT INTERPRETATION
+-------------------------
+The model prediction score is a classification score, not a probability that an attack is a real-world zero-day.
+Unseen DDoS and PortScan performance demonstrates generalization to attack families excluded from training, but does not prove detection of every real-world zero-day attack.

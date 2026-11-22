@@ -1,0 +1,210 @@
+﻿======================================================================
+ZERO GUARD
+AI-BASED ZERO-DAY ATTACK DETECTION USING GRAPH NEURAL NETWORKS
+======================================================================
+
+PUBLICATION GNN EVALUATION RESULTS
+
+Generated: 2026-09-22 20:32:13
+
+======================================================================
+1. EVALUATION SUMMARY
+======================================================================
+
+Model:
+ZeroGuard GCN Publication Model
+
+Model file:
+data\research\processed\evaluation\gnn_ready_publication\models\zeroguard_gcn_publication.pt
+
+Evaluation device:
+CPU
+
+Independent test samples:
+100,000
+
+Test feature matrix:
+(100000, 78)
+
+Test graph edge index:
+(2, 635700)
+
+Test edge weights:
+(635700,)
+
+Feature/label alignment:
+PASS
+
+Test graph validation:
+PASS
+
+Model loading:
+PASS
+
+Predictions generated:
+100,000
+
+Predicted BENIGN:
+33,840
+
+Predicted ATTACK:
+66,160
+
+
+======================================================================
+2. ZERO-DAY / UNSEEN ATTACK VERIFICATION
+======================================================================
+
+DDoS training rows:
+0
+
+PortScan training rows:
+0
+
+Unseen attack verification:
+PASS
+
+The evaluation verified that DDoS and PortScan had zero training
+rows in the evaluated training configuration and were therefore
+treated as unseen attack families during independent testing.
+
+
+======================================================================
+3. CONFUSION MATRIX
+======================================================================
+
+                         Predicted
+                    BENIGN       ATTACK
+
+Actual BENIGN       29,056       20,944
+
+Actual ATTACK       4,784       45,216
+
+
+True Negative (TN):
+29,056
+
+False Positive (FP):
+20,944
+
+False Negative (FN):
+4,784
+
+True Positive (TP):
+45,216
+
+
+======================================================================
+4. CLASSIFICATION PERFORMANCE
+======================================================================
+
+Accuracy:
+74.2720%
+
+Precision:
+68.3434%
+
+Recall:
+90.4320%
+
+F1-score:
+77.8512%
+
+Specificity:
+58.1120%
+
+
+======================================================================
+5. UNSEEN ATTACK FAMILY PERFORMANCE
+======================================================================
+
+DDoS
+----------------------------------------------------------------------
+Total test samples:
+25,000
+
+Detected:
+21,668
+
+Missed:
+3,332
+
+Detection rate:
+86.6720%
+
+
+PortScan
+----------------------------------------------------------------------
+Total test samples:
+25,000
+
+Detected:
+23,548
+
+Missed:
+1,452
+
+Detection rate:
+94.1920%
+
+
+======================================================================
+6. PUBLICATION FIGURES
+======================================================================
+
+Figure 1 - Confusion Matrix:
+data\research\processed\evaluation\gnn_ready_publication\results\figures\figure_1_confusion_matrix.png
+
+Figure 2 - Classification Performance:
+data\research\processed\evaluation\gnn_ready_publication\results\figures\figure_2_classification_metrics.png
+
+Figure 3 - Unseen Attack Detection:
+data\research\processed\evaluation\gnn_ready_publication\results\figures\figure_3_unseen_attack_detection.png
+
+
+======================================================================
+7. RESULTS INTERPRETATION
+======================================================================
+
+The ZeroGuard publication GNN was evaluated using an independent
+test set containing 100,000 samples.
+
+The model achieved an accuracy of 74.2720%, with a precision
+of 68.3434%, recall of 90.4320%, and F1-score of
+77.8512%.
+
+The recall of 90.4320% indicates that the model identified a
+large proportion of the attack samples present in the independent
+test set. The corresponding specificity was 58.1120%,
+indicating the proportion of benign samples correctly identified
+as benign.
+
+For the unseen attack-family evaluation, the model detected
+21,668 of 25,000 DDoS samples, corresponding to
+a detection rate of 86.6720%.
+
+For PortScan, the model detected 23,548 of
+25,000 samples, corresponding to a detection rate of
+94.1920%.
+
+These results provide the quantitative evaluation used for the
+ZeroGuard research paper, seminar results, and publication figures.
+
+
+======================================================================
+8. IMPORTANT REPRODUCIBILITY INFORMATION
+======================================================================
+
+This document records the results produced by:
+
+Step 15.6 - Independent Publication GNN Evaluation
+
+Step 15.7 - Publication Figure Generation
+
+The numerical values in this document are copied from the verified
+evaluation output and should be treated as the current reference
+values for the publication results section.
+
+======================================================================
+END OF ZERO GUARD PUBLICATION RESULTS
+======================================================================
